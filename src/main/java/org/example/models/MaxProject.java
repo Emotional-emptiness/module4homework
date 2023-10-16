@@ -1,10 +1,10 @@
-package org.example;
+package org.example.models;
 
-public class LongestProject {
+public class MaxProject {
     private String name;
     private int age;
 
-    public LongestProject(String name, int age) {
+    public MaxProject(String name, int age) {
         this.name = name;
         this.age = age;
     }

@@ -1,10 +1,10 @@
-package org.example;
+package org.example.models;
 
-public class MaxSalaryWorker {
+public class YoungestEldestWorkers {
     private String name;
     private int age;
 
-    public MaxSalaryWorker(String name, int age) {
+    public YoungestEldestWorkers(String name, int age) {
         this.name = name;
         this.age = age;
     }

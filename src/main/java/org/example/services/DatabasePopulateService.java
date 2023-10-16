@@ -1,17 +1,20 @@
-package org.example;
+package org.example.services;
+
+import org.example.services.Database;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.sql.Connection;
 import java.sql.Statement;
 
-public class DatabaseInitService {
+public class DatabasePopulateService {
 
-    public static void main(String[] args) {
+    public static void populateDatabase() {
 
         Connection connection = Database.getInstance().getConnection();
 
-        String sqlFilePath = "/home/kali/IdeaProjects/module4homework/sql/init_db.sql";
+
+        String sqlFilePath = "/home/kali/IdeaProjects/module4homework/sql/populate_db.sql";
 
         try {
 
@@ -24,12 +27,10 @@ public class DatabaseInitService {
             while ((line = reader.readLine()) != null) {
                 query.append(line);
                 if (line.endsWith(";")) {
-
                     statement.execute(query.toString());
                     query.setLength(0);
                 }
             }
-
 
             reader.close();
             statement.close();
@@ -39,5 +40,7 @@ public class DatabaseInitService {
 
         }
     }
+
+
 }
 

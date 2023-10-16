@@ -1,4 +1,4 @@
-package org.example;
+package org.example.models;
 
 public class ProjectPrices {
     private String projectName;
