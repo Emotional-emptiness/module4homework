@@ -170,7 +170,7 @@ public class DatabaseQueryService {
         return result;
     }
 
-    // Знайти ціни на проекти
+
     public List<ProjectPrices> findProjectPrices() {
         List<ProjectPrices> result = new ArrayList<>();
 
